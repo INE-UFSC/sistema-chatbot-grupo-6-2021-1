@@ -5,17 +5,17 @@ import random as r
 
 class Bot(ABC):
 
-    def __init__(nome,):
+    def __init__(self, nome,):
         self.nome = nome
         self.comandos = {}
 
     @property
     def nome(self):
-        pass
+        return self.nome
 
     @nome.setter
-    def nome(nome):
-        pass
+    def nome(self, nome):
+        self.nome = nome
 
     def mostra_comandos(self):
         pass
