@@ -16,7 +16,9 @@ class SistemaChatBot:
         ##mostra o menu de escolha de bots
     
     def escolhe_bot(self):
-        pass
+        escolha = int(input('Digite o numero do chatbot desejado: '))
+        self.__bot = self.__lista_bots[escolha]
+
         ##faz a entrada de dados do usuário e atribui o objeto ao atributo __bot 
 
     def mostra_comandos_bot(self):
@@ -24,14 +26,20 @@ class SistemaChatBot:
         ##mostra os comandos disponíveis no bot escolhido
 
     def le_envia_comando(self):
-        pass
-        ##faz a entrada de dados do usuário e executa o comando no bot ativo
-
+        escolha = int(input('Digite o comando desejado (ou -1 para fechar o programa):'))
+        if escolha == -1:
+            return False
+        self.__bot.executa_comando(escolha)##faz a entrada de dados do usuário e executa o comando no bot ativo
+        return True
     def inicio(self):
-        
+        run = True
         print(self.boas_vindas)##mostra mensagem de boas-vindas do sistema
         ##mostra o menu ao usuário
-        ##escolha do bot      
-        self.boas_vindas()##mostra mensagens de boas-vindas do bot escolhido
-        self.mostra_comandos_bot()##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
+        self.escolhe_bot##escolha do bot      
+        self.__bot.boas_vindas()##mostra mensagens de boas-vindas do bot escolhido
+        
+        while run:
+            self.mostra_comandos_bot()##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
+            run = self.le_envia_comando()
+            
         ##ao sair mostrar a mensagem de despedida do bot
