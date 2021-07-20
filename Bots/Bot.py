@@ -5,21 +5,34 @@ import random as r
 
 class Bot(ABC):
 
-    def __init__(nome,):
+    def __init__(self, nome, comandos):
         self.nome = nome
-        self.comandos = {}
+        self.__comandos = {}
+        
+        txt = []
+        for cmd, desc in self.comandos.items():
+            txt.append(str(cmd) + "/t - " + desc)
+        self.__comandos_str = "/n".join(txt)
 
     @property
     def nome(self):
         pass
 
     @nome.setter
-    def nome(nome):
-        pass
+    def nome(self, nome):
+        self.__nome = nome
+        
+    @property()
+    def comandos(self):
+        return self.__comandos
 
+    @abstractmethod
+    def apresentacao(self):
+        pass
+    
     def mostra_comandos(self):
-        pass
-
+        return self.__comandos_str
+        
     @abstractmethod
     def executa_comando(self,cmd):
         pass
