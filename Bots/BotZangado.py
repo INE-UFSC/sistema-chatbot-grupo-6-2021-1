@@ -14,16 +14,16 @@ class BotZangado(Bot):
     
     def executa_comando(self, cmd):
         if cmd == 0: #Bom dia
-            return "Bom dia AAAAAAAAAa"
+            return "AAAAAAAAAAAAAAAAAAAAAAAA"
         elif cmd == 1: #Qual é seu nome?
-            return "Bom dia AAAAAAAAAa"
+            return "Não sabe ler!?!?"
         elif cmd == 2: #Quero um conselho
-            return "Quero um conselho AAAAAAAAAa"
+            return "Use o comando -1"
         elif cmd == 3: #Adeus
-            return "Adeus AAAAAAAAAa"
+            return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nEsse não é o comando -1"
 
     def boas_vindas(self):
-        return "Boas vindas AAAAAAAAAAAAaaa"
+        return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 
     def despedida(self):
-        return "despeida AAAAAAAAAAAAaaa"
+        return "Foi tarde"
