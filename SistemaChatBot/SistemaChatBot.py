@@ -12,7 +12,7 @@ class SistemaChatBot:
         self.__bot = None
 
     def boas_vindas(self):
-        print('Bem vindo ao sistema de chatos bots da empresa {}').format(self.__empresa)
+        print('Bem vindo ao sistema de chatos bots da empresa {}'.format(self.__empresa))
         # mostra mensagem de boas vindas do sistema
 
     def mostra_menu(self):
