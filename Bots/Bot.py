@@ -9,11 +9,11 @@ class Bot(ABC):
         self.nome = nome
         self.comandos = {}
 
-    #nao esquecer o decorator
+    @property
     def nome(self):
         pass
 
-    #nao esquecer o decorator
+    @nome.setter
     def nome(nome):
         pass
 
