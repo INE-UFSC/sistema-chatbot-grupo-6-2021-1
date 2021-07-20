@@ -18,7 +18,7 @@ class Bot(ABC):
         self.nome = nome
 
     def mostra_comandos(self):
-        pass
+        return list(self.comandos)
 
     @abstractmethod
     def executa_comando(self,cmd):
