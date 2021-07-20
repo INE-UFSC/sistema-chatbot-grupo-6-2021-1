@@ -9,7 +9,7 @@ class SistemaChatBot:
         self.__bot = None
 
     def boas_vindas(self):
-        return 'Bem vindo ao sistema de chatos bots'
+        print('Bem vindo ao sistema de chatos bots')
         # mostra mensagem de boas vindas do sistema
 
     def mostra_menu(self):
@@ -20,13 +20,22 @@ class SistemaChatBot:
                   self.__lista_bots[i].apresentacao())
 
     def escolhe_bot(self):
-        escolha = int(input('Digite o numero do chatbot desejado: '))
-        self.__bot = self.__lista_bots[escolha]
+        while True:
+            escolha = input('Digite o numero do chatbot desejado: ').strip()
+            try:
+                escolha =int(escolha)
+            except:
+                print('entrada invalida')
+                continue
+            
+            if escolha < len(self.__lista_bots) and escolha > 0:
+                self.__bot = self.__lista_bots[escolha]
+                break
 
         # faz a entrada de dados do usuário e atribui o objeto ao atributo __bot
 
     def mostra_comandos_bot(self):
-        self.__bot.mostra_comandos()
+        print(self.__bot.mostra_comandos())
         # mostra os comandos disponíveis no bot escolhido
 
     def le_envia_comando(self):
@@ -43,7 +52,7 @@ class SistemaChatBot:
     def inicio(self):
         run = True
 
-        print(self.boas_vindas)  # mostra mensagem de boas-vindas do sistema
+        self.boas_vindas()  # mostra mensagem de boas-vindas do sistema
         self.mostra_menu()  # mostra o menu ao usuário
         self.escolhe_bot()  # escolha do bot
         self.__bot.boas_vindas()  # mostra mensagens de boas-vindas do bot escolhido
