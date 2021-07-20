@@ -1,7 +1,6 @@
 ##implemente as seguintes classes
 
 from abc import ABC, abstractmethod
-import random as r
 
 class Bot(ABC):
 
@@ -16,7 +15,7 @@ class Bot(ABC):
 
     @property
     def nome(self):
-        pass
+        return self.nome
 
     @nome.setter
     def nome(self, nome):
@@ -32,7 +31,7 @@ class Bot(ABC):
     
     def mostra_comandos(self):
         return self.__comandos_str
-        
+    
     @abstractmethod
     def executa_comando(self,cmd):
         pass
