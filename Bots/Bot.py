@@ -6,22 +6,22 @@ class Bot(ABC):
 
     def __init__(self, nome, comandos):
         self.nome = nome
-        self.__comandos = {}
+        self.__comandos = comandos
         
         txt = []
-        for cmd, desc in self.comandos.items():
-            txt.append(str(cmd) + "/t - " + desc)
-        self.__comandos_str = "/n".join(txt)
+        for cmd, desc in self.__comandos.items():
+            txt.append(str(cmd) + "\t - " + desc)
+        self.__comandos_str = "\n".join(txt)
 
     @property
     def nome(self):
-        return self.nome
+        return self.__nome
 
     @nome.setter
     def nome(self, nome):
         self.__nome = nome
 
-    @property()
+    @property
     def comandos(self):
         return self.__comandos
 

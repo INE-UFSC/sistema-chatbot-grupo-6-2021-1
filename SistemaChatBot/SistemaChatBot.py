@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, '..') # to import modules from parent folder 
+
 from Bots.Bot import Bot
 
 
@@ -14,7 +17,7 @@ class SistemaChatBot:
 
     def mostra_menu(self):
         print("Os chatbots disponíveis são:")
-        for i in range(self.__lista_bots):
+        for i in range(len(self.__lista_bots)):
             print(i, "- Bot: ",
                   self.__lista_bots[i].nome,
                   self.__lista_bots[i].apresentacao())
@@ -23,12 +26,12 @@ class SistemaChatBot:
         while True:
             escolha = input('Digite o numero do chatbot desejado: ').strip()
             try:
-                escolha =int(escolha)
+                escolha = int(escolha)
             except:
                 print('entrada invalida')
                 continue
             
-            if escolha < len(self.__lista_bots) and escolha > 0:
+            if escolha < len(self.__lista_bots) and escolha >= 0:
                 self.__bot = self.__lista_bots[escolha]
                 break
 
@@ -46,7 +49,7 @@ class SistemaChatBot:
             return False
 
         # faz a entrada de dados do usuário e executa o comando no bot ativo
-        self.__bot.executa_comando(escolha)
+        print(self.__bot.executa_comando(escolha))
         return True
 
     def inicio(self):
@@ -62,6 +65,6 @@ class SistemaChatBot:
             self.mostra_comandos_bot()
             run = self.le_envia_comando()
 
-        self.__bot.despedida()
+        print(self.__bot.despedida())
 
         # ao sair mostrar a mensagem de despedida do bot
