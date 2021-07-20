@@ -22,7 +22,7 @@ class BotSulMatogrossense(Bot):
         self.__nome = nome
 
     def apresentacao(self):
-        return "TaRrde! Eu sou o {} e vim do interioRr".format(self.__nome)
+        return "TaRrde! Eu sou o(a) {} e vim do interioRr".format(self.__nome)
     
     def executa_comando(self,cmd):
         if cmd == 0: 
