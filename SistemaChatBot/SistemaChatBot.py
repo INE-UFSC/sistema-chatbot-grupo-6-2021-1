@@ -8,7 +8,7 @@ class SistemaChatBot:
         self.__bot = None
     
     def boas_vindas(self):
-        pass
+        return 'Bem vindo ao sistema de chatos bots'
         ##mostra mensagem de boas vindas do sistema
 
     def mostra_menu(self):
@@ -20,7 +20,7 @@ class SistemaChatBot:
         ##faz a entrada de dados do usuário e atribui o objeto ao atributo __bot 
 
     def mostra_comandos_bot(self):
-        pass
+        self.__bot.mostra_comandos()
         ##mostra os comandos disponíveis no bot escolhido
 
     def le_envia_comando(self):
@@ -28,10 +28,10 @@ class SistemaChatBot:
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
 
     def inicio(self):
-        pass
-        ##mostra mensagem de boas-vindas do sistema
+        
+        print(self.boas_vindas)##mostra mensagem de boas-vindas do sistema
         ##mostra o menu ao usuário
         ##escolha do bot      
-        ##mostra mensagens de boas-vindas do bot escolhido
-        ##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
+        self.boas_vindas()##mostra mensagens de boas-vindas do bot escolhido
+        self.mostra_comandos_bot()##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
         ##ao sair mostrar a mensagem de despedida do bot
