@@ -1,28 +1,29 @@
 from Bots.Bot import Bot
 
 class BotZangado(Bot):
-    def __init__(self,nome):
-        self.__nome = nome
-
-    #nao esquecer o decorator
-    def nome(self):
-        pass
-
-    #nao esquecer o decorator
-    def nome(nome):
-        pass
+    __com = {0: "Bom dia",
+             1: "Qual é seu nome?",
+             2: "Quero um conselho",
+             3: "Adeus"}
+    
+    def __init__(self, nome):
+        super().__init__(nome, self.__com)
 
     def apresentacao(self):
-        pass
- 
-    def mostra_comandos(self):
-        pass
+        return "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
     
-    def executa_comando(self,cmd):
-        pass
+    def executa_comando(self, cmd):
+        if cmd == 0: #Bom dia
+            return "Bom dia AAAAAAAAAa"
+        elif cmd == 1: #Qual é seu nome?
+            return "Bom dia AAAAAAAAAa"
+        elif cmd == 2: #Quero um conselho
+            return "Quero um conselho AAAAAAAAAa"
+        elif cmd == 3: #Adeus
+            return "Adeus AAAAAAAAAa"
 
     def boas_vindas(self):
-        pass
+        return "Boas vindas AAAAAAAAAAAAaaa"
 
     def despedida(self):
-        pass
+        return "despeida AAAAAAAAAAAAaaa"
