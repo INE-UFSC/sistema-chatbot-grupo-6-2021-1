@@ -7,8 +7,7 @@ class BotSulMatogrossense(Bot):
              2: "Quero um téras",
              3: "Qual seu animal de estimação?",
              4: "Você mora na aldeia?",
-             5: "Como é aí no Mato Grosso?",
-             6: "Adeus"}
+             5: "Como é aí no Mato Grosso?"}
 
     def __init__(self, nome):
         super().__init__(nome, self.__com)  
@@ -39,7 +38,7 @@ class BotSulMatogrossense(Bot):
             return "DO SUL."
 
     def boas_vindas(self):
-        pass
+        return "Seja bem vindo ao meu país MS"
 
     def despedida(self):
-        pass
+        return "Falô"
