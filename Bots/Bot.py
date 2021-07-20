@@ -20,7 +20,7 @@ class Bot(ABC):
     @nome.setter
     def nome(self, nome):
         self.__nome = nome
-        
+
     @property()
     def comandos(self):
         return self.__comandos
@@ -33,13 +33,13 @@ class Bot(ABC):
         return self.__comandos_str
     
     @abstractmethod
-    def executa_comando(self,cmd):
+    def executa_comando(self, cmd):
         pass
 
     @abstractmethod
-    def boas_vindas():
+    def boas_vindas(self):
         pass
     
     @abstractmethod
-    def despedida():
+    def despedida(self):
         pass
