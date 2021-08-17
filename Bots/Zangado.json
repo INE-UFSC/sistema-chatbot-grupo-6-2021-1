@@ -1,0 +1,46 @@
+[
+    {
+        "nome": "Zangado",
+        "codigo": 1,
+        "comandos":
+        [
+            {
+                "id": 1,
+                "mensagem": "Bom dia",
+                "respostas": ["E o que tem de bom no dia?",
+                       "Impossível com você aqui",
+                       "..."]
+            },
+
+            {
+                "id": 2,
+                "mensagem": "Qual o seu nome?",
+                "respostas": ["E o que tem de bom no dia?",
+                        "É sério que você quer que eu repita? É Zangado!!!",
+                        "Não te interessa!",
+                        "Vai sumir se eu te disser? Zangado, agora suma!"
+                        ]
+            },
+
+            {
+                "id": 3,
+                "mensagem": "Quero um conselho",
+                "respostas": ["E o que tem de bom no dia?",
+                        "Não tenho filho desse tamanho.",
+                        "Nada é tão ruim que não possa piorar.",
+                        "Tem coisas mais irritantes que você, você no espelho."
+                        ]
+            },
+
+            {
+                "id": 4,
+                "mensagem": "Adeus",
+                "respostas": ["E o que tem de bom no dia?",
+                        "Bom demais para ser verdade.",
+                        "Como se você fosse mesmo me deixar em paz.",
+                        "Já vai tarde!"
+                        ]
+            }
+        ]
+    }
+]
