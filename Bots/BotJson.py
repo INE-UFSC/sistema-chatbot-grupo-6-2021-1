@@ -11,30 +11,22 @@ class BotJson(Bot):
             comandos += ".json"
 
         with open(comandos, 'r') as file:
-            temp = json.load(file)
-            self.nome = temp["nome"]
+            temp = json.load(file)[0]
             self.__apre = temp["apresentação"]
             self.__vindas = temp["boas vindas"]
             self.__despedida = temp["despedida"]
-            self.__comandos = {}
+            comandos = {}
             for com in temp["comandos"]:
-                self.comandos[com["id"]] = Comando(**com)
-            self.__n_comandos = len(self.__comandos)
+                comandos[com["id"]] = Comando(**com)
+            self.__n_comandos = len(comandos)
 
-        txt = []
-        for id, comando in self.__comandos.items():
-            txt.append(str(id) + "\t - " + comando.mensagem)
-        self.__comandos_str = "\n".join(txt)
+            super().__init__(temp["nome"], comandos)
 
     def apresentacao(self):
         return self.__apre
 
     def executa_comando(self, cmd):
-        try:
-            self.__comandos[cmd]
-        except:
-            print("Comando não encontrado")
-            raise
+        return self.comandos[cmd].getRandomResposta()
 
     def boas_vindas(self):
         return self.__vindas

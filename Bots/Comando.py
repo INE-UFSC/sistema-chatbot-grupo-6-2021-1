@@ -1,9 +1,11 @@
 import random
+
+
 class Comando:
     # recebe o id (inteiro), a mensagem e as respostas (opcional)
-    def __init__(self, id, msg, respostas = []):
+    def __init__(self, id, mensagem, respostas=[]):
         self.__id = id
-        self.__msg = msg 
+        self.__msg = mensagem
         self.__respostas = respostas
 
     @property
@@ -22,6 +24,9 @@ class Comando:
     def addResposta(self, resposta):
         self.__respostas.append(resposta)
 
-    # remove resposta 
+    # remove resposta
     def delResposta(self, resposta):
         self.__respostas.pop(resposta)
+
+    def __str__(self):
+        return self.__msg

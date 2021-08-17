@@ -1,13 +1,16 @@
 [
     {
         "nome": "Zangado",
-        "codigo": 1,
+        "apresentação": "Vá encher o saco de outro",
+        "boas vindas": "...",
+        "despedida": "Foi tarde",
         "comandos":
         [
             {
                 "id": 1,
                 "mensagem": "Bom dia",
-                "respostas": ["E o que tem de bom no dia?",
+                "respostas": [
+                       "E o que tem de bom no dia?",
                        "Impossível com você aqui",
                        "..."]
             },
@@ -15,17 +18,19 @@
             {
                 "id": 2,
                 "mensagem": "Qual o seu nome?",
-                "respostas": ["E o que tem de bom no dia?",
+                "respostas": [
                         "É sério que você quer que eu repita? É Zangado!!!",
                         "Não te interessa!",
-                        "Vai sumir se eu te disser? Zangado, agora suma!"
+                        "Vai sumir se eu te disser? Zangado, agora suma!",
+                        "Não sabe ler!?"
                         ]
             },
 
             {
                 "id": 3,
                 "mensagem": "Quero um conselho",
-                "respostas": ["E o que tem de bom no dia?",
+                "respostas": [
+                        "Use o comando -1",
                         "Não tenho filho desse tamanho.",
                         "Nada é tão ruim que não possa piorar.",
                         "Tem coisas mais irritantes que você, você no espelho."
@@ -35,10 +40,10 @@
             {
                 "id": 4,
                 "mensagem": "Adeus",
-                "respostas": ["E o que tem de bom no dia?",
+                "respostas": [
                         "Bom demais para ser verdade.",
                         "Como se você fosse mesmo me deixar em paz.",
-                        "Já vai tarde!"
+                        "Esse não é o comando -1"
                         ]
             }
         ]

@@ -10,7 +10,7 @@ class Bot(ABC):
         
         txt = []
         for cmd, desc in self.__comandos.items():
-            txt.append(str(cmd) + "\t - " + desc)
+            txt.append(str(cmd) + "\t - " + str(desc))
         self.__comandos_str = "\n".join(txt)
 
     @property
