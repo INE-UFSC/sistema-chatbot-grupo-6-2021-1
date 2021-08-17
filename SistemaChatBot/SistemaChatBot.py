@@ -42,8 +42,14 @@ class SistemaChatBot:
         # mostra os comandos disponíveis no bot escolhido
 
     def le_envia_comando(self):
-        escolha = int(
-            input('Digite o comando desejado (ou -1 para fechar o programa):'))
+        while True:
+            try:
+                escolha = int(
+                    input('Digite o comando desejado (ou -1 para fechar o programa):'))
+            except:
+                print('Comando deve ser um numero')
+                continue 
+            break 
 
         if escolha == -1:
             return False
